@@ -8,7 +8,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Deploy
         uses: appleboy/ssh-action@master
@@ -18,5 +17,6 @@ jobs:
           port: ${{ secrets.PORT }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
+            cd canorus
             git pull origin main
             docker-compose up -d
