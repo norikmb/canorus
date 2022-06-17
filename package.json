@@ -1,0 +1,27 @@
+{
+	"name": "canorus",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "ts-node -r dotenv/config src/index.ts",
+		"start": "tsc -p . && node -r dotenv/config build/index.js",
+		"build": "tsc -p ."
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "16",
+		"@typescript-eslint/eslint-plugin": "^5.28.0",
+		"@typescript-eslint/parser": "^5.28.0",
+		"eslint": ">=5.16.0",
+		"eslint-config-google": "^0.14.0",
+		"eslint-config-prettier": "^8.5.0",
+		"ts-node": "^10.8.1",
+		"typescript": "^4.7.3"
+	},
+	"dependencies": {
+		"discord.js": "^13.8.0"
+	}
+}
