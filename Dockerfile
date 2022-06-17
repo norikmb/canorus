@@ -15,4 +15,4 @@ COPY --from=builder /app/build .
 
 RUN npm install --production
 
-CMD [ "node -r dotenv/config", "/app/index.js" ]
+CMD [ "node", "/app/index.js" ]
