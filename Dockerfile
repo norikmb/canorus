@@ -13,6 +13,7 @@ WORKDIR /app
 COPY package.json .
 COPY --from=builder /app/build .
 
-RUN npm install --production
+RUN npm install
 
+USER node
 CMD [ "node", "/app/index.js" ]
