@@ -24,7 +24,6 @@ Docker-compose を用いて起動する場合
 
 ```sh-session
 cd canorus/
-pnpm install
 docker-compose up -d
 ```
 
