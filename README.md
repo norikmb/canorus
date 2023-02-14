@@ -14,8 +14,8 @@ Node.js を用いて起動する場合
 
 ```sh-session
 cd canorus/
-pnpm install
-pnpm start
+pnpm i
+pnpm dev
 ```
 
 Docker-compose を用いて起動する場合  
@@ -24,7 +24,7 @@ Docker-compose を用いて起動する場合
 
 ```sh-session
 cd canorus/
-pnpm install
+docker-compose build
 docker-compose up -d
 ```
 
@@ -32,3 +32,4 @@ docker-compose up -d
 
 - [SSH for GitHub Actions](https://github.com/appleboy/ssh-action)
 - [Emoji Prefix](https://gitmoji.dev/)
+

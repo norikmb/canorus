@@ -1,19 +1,13 @@
-FROM node:lts-alpine AS builder
+FROM node:lts-slim AS builder
 
 WORKDIR /app
+RUN apt update \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN npm install -g pnpm
 
-COPY . .
-RUN pnpm install && pnpm build
-
-
-FROM node:lts-alpine
-
-WORKDIR /app
-COPY package.json .
-COPY --from=builder /app/build .
-
-RUN npm install
+COPY main.ts package.json pnpm-lock.yaml .
+RUN pnpm i
 
 USER node
-CMD [ "node", "/app/index.js" ]
