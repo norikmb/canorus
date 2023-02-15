@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx main.ts",
-    "fmt": "rome format --write src/main.ts && rome check --apply-suggested src/main.ts",
-    "build": "esbuild src/main.ts --bundle --outfile=build/main.js --platform=node"
+    "fmt": "rome format --write main.ts && rome check --apply-suggested main.ts",
+    "build": "esbuild main.ts --bundle --outfile=build/main.js --platform=node"
   },
   "keywords": [],
   "author": "",
