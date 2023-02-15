@@ -2,7 +2,7 @@ version: '3'
 services:
   bot:
     build: .
-    command: pnpm dev
+    command: pnpm start
     restart: always
     env_file:
       - .env

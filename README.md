@@ -2,33 +2,28 @@
 
 ## About
 
-Canorus は [Node.js](https://nodejs.org/ja/) 環境で動作する [discord.js](https://discord.js.org) を使用した Bot アプリです.  
-[Oracle Cloud Infrastructure](https://www.oracle.com/jp/cloud/) に対して [GitHub Actions](https://github.com/features/actions) を用いて自動デプロイしています.  
-また, [Docker Compose](https://docs.docker.com/compose/) を利用した環境構築も可能です.
+- Canorus は [Node.js](https://nodejs.org/ja/) 環境で動作する [discord.js](https://discord.js.org) を使用した Bot アプリです.
+- [Oracle Cloud Infrastructure](https://www.oracle.com/jp/cloud/)にデプロイされています.
 
 ## Installation
 
-Node.js を用いて起動する場合  
-**[Node.js](https://nodejs.org/ja/) 16.15.0 or newer is required.**  
-**[pnpm](https://pnpm.io/ja/) 7.1.7 or newer is required.**
+- Node.js と pnpm を用いて起動する場合
 
-```sh-session
+```shell
 cd canorus/
 pnpm i
-pnpm dev
+pnpm start
 ```
 
-Docker-compose を用いて起動する場合  
-**[Docker](https://docs.docker.com/) 20.10.14 or newer is required.**  
-**[Docker Compose](https://docs.docker.com/compose/) 1.29.2 or newer is required.**
-
-```sh-session
+- docker compose を用いて起動する場合
+```shell
 cd canorus/
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Other Reference
 
 - [SSH for GitHub Actions](https://github.com/appleboy/ssh-action)
-- [Emoji Prefix](https://gitmoji.dev/)
+- [discord.js](https://discord.js.org/#/)
+- [chatgpt-api](https://github.com/transitive-bullshit/chatgpt-api)
 
