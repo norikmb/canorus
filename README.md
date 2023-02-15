@@ -24,7 +24,6 @@ Docker-compose を用いて起動する場合
 
 ```sh-session
 cd canorus/
-docker-compose build
 docker-compose up -d
 ```
 
