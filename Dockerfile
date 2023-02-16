@@ -7,7 +7,10 @@ RUN apt update \
 
 RUN npm install -g pnpm
 
-COPY main.ts package.json pnpm-lock.yaml .
+RUN mkdir src/
+COPY src/ src/
+COPY package.json pnpm-lock.yaml .
+
 RUN pnpm i
 
 USER node
