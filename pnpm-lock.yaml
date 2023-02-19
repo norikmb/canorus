@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@typedotenv/cli': ^0.3.0
   chatgpt: ^4.4.0
   discord.js: ^14.7.1
   dotenv: ^16.0.3
@@ -10,9 +11,10 @@ specifiers:
 dependencies:
   chatgpt: 4.4.0
   discord.js: 14.7.1
-  dotenv: 16.0.3
 
 devDependencies:
+  '@typedotenv/cli': 0.3.0
+  dotenv: 16.0.3
   rome: 11.0.0
   tsx: 3.12.3
 
@@ -343,6 +345,11 @@ packages:
     resolution: {integrity: sha512-OvjF+z51L3ov0OyAU0duzsYuvO01PH7x4t6DJx+guahgTnBHkhJdG7soQeTSFLWN3efnHyibZ4Z8l2EuWwJN3A==}
     dev: false
 
+  /@typedotenv/cli/0.3.0:
+    resolution: {integrity: sha512-ye6ovGDSdBz+p2mFXBegLtFUfiekarCoJgaAzwij8KOA4IVEUcAf7d7wKrJY/nE5uicy2VuosiQNh0qk4D/7ZQ==}
+    hasBin: true
+    dev: true
+
   /@types/node/16.18.12:
     resolution: {integrity: sha512-vzLe5NaNMjIE3mcddFVGlAXN1LEWueUsMsOJWaT6wWMJGyljHAWHznqfnKUQWGzu7TLPrGvWdNAsvQYW+C0xtw==}
     dev: false
@@ -404,7 +411,7 @@ packages:
   /dotenv/16.0.3:
     resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
     engines: {node: '>=12'}
-    dev: false
+    dev: true
 
   /esbuild/0.17.8:
     resolution: {integrity: sha512-g24ybC3fWhZddZK6R3uD2iF/RIPnRpwJAqLov6ouX3hMbY4+tKolP0VMF3zuIYCaXun+yHwS5IPQ91N2BT191g==}
