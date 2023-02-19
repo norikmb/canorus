@@ -1,17 +1,15 @@
+import { OPENAI_API_KEY } from "./env";
 import { ChatGPTAPI } from "chatgpt";
 import { Message } from "discord.js";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const api = new ChatGPTAPI({
-	apiKey: process.env.OPENAI_API_KEY!,
+	apiKey: OPENAI_API_KEY,
 	debug: true,
 });
 
 export const chatgptResponse = async (message: Message<boolean>) => {
-	// chatGPTからレスポンスを返す
-	message.channel.sendTyping(); // Promiseが解決するまで入力中...と表示させる
-	const response = await api.sendMessage(message.content);
+	const question = message.content.replace(/<@[0-9]{18}>/g, "");  //ユーザー名は送信しない
+	message.channel.sendTyping();  // Promiseが解決するまで入力中...と表示させる
+	const response = await api.sendMessage(question);  // chatGPTからレスポンスを返す
 	return response.text;
 };

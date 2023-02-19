@@ -4,18 +4,20 @@
   "description": "",
   "main": "main.ts",
   "scripts": {
-    "start": "tsx src/main.ts",
-    "fmt": "rome format --write . && rome check --apply-suggested ."
+    "start": "tsx -r dotenv/config src/main.ts",
+    "fmt": "rome format --write . && rome check --apply-suggested .",
+    "generate": "typedotenv generate src/modules/env.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chatgpt": "^4.4.0",
-    "discord.js": "^14.7.1",
-    "dotenv": "^16.0.3"
+    "discord.js": "^14.7.1"
   },
   "devDependencies": {
+    "@typedotenv/cli": "^0.3.0",
+    "dotenv": "^16.0.3",
     "rome": "^11.0.0",
     "tsx": "^3.12.3"
   }

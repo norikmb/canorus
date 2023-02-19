@@ -1,9 +1,7 @@
 import { chatgptResponse } from "./modules/chatgpt";
 import { codeHighlight } from "./modules/codehighlight";
+import { TOKEN } from "./modules/env";
 import { Client, GatewayIntentBits } from "discord.js";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const client = new Client({
 	intents: [
@@ -40,4 +38,4 @@ client.on("messageCreate", async (message) => {
 	}
 });
 
-client.login(process.env.TOKEN);
+client.login(TOKEN);
