@@ -1,5 +1,6 @@
 import { chatgptResponse } from "./modules/chatgpt";
 import { codeHighlight } from "./modules/codehighlight";
+import { vxTwitter } from "/modules/vxtwitter";
 import { TOKEN } from "./modules/env";
 import { Client, GatewayIntentBits } from "discord.js";
 
@@ -35,6 +36,12 @@ client.on("messageCreate", async (message) => {
 		const code = await codeHighlight(message);
 		if (code === undefined) return;
 		message.channel.send(code);
+	}
+	if (message.content.startsWith("https://x.com/")) {
+		// xのリンクだった場合
+		const post = await  vxTwitter(message);
+		if (post === undefined) return;
+		message.channel.send(post);
 	}
 });
 
