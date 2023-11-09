@@ -1,7 +1,10 @@
 {
-  // フォーマッターとLinterをromeにする
-  "editor.defaultFormatter": "rome.rome",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports.rome": true
+  // FormatterとLinterをdenoにする
+  "deno.enable": false,
+  "deno.lint": true,
+  "deno.config": "./deno.jsonc",
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "denoland.vscode-deno"
   }
 }
