@@ -1,6 +1,6 @@
 import { chatgptResponse } from "./modules/chatgpt";
 import { codeHighlight } from "./modules/codehighlight";
-import { vxTwitter } from "/modules/vxtwitter";
+import { vxTwitter } from "./modules/vxtwitter";
 import { TOKEN } from "./modules/env";
 import { Client, GatewayIntentBits } from "discord.js";
 
@@ -23,9 +23,7 @@ client.on("messageCreate", async (message) => {
 	if (!client.user) {
 		return;
 	}
-	console.log(
-		`[${message.author.tag}]さんから ${message.content}と言われました`,
-	);
+	console.log(`User: [${message.author.tag}], Message: "${message.content}"`);
 	if (message.mentions.users.has(client.user.id)) {
 		// bot宛のメンションだった場合
 		const text = await chatgptResponse(message);
@@ -39,7 +37,7 @@ client.on("messageCreate", async (message) => {
 	}
 	if (message.content.startsWith("https://x.com/")) {
 		// xのリンクだった場合
-		const post = await  vxTwitter(message);
+		const post = await vxTwitter(message);
 		if (post === undefined) return;
 		message.channel.send(post);
 	}
